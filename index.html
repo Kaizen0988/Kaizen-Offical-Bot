@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB Diamond Shop</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #28a745;
+            --bg-color: #f4f6f9;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .pricing-section {
+            background-color: #eef2f7;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            max-height: 250px;
+            overflow-y: auto; /* Adds scrolling for many diamonds */
+        }
+
+        .pricing-section h3 {
+            margin-top: 0;
+            color: #444;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 8px;
+            position: sticky;
+            top: 0;
+            background: #eef2f7;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-weight: 500;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #555;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>💎 MLBB Diamonds Shop</h1>
+
+        <div class="pricing-section">
+            <h3>💰 Price List (စျေးနှုန်းဇယား)</h3>
+            <div class="price-item"><span>🔹 86 Diamonds</span><span>3,500 Ks</span></div>
+            <div class="price-item"><span>🔹 172 Diamonds</span><span>7,000 Ks</span></div>
+            <div class="price-item"><span>🔹 257 Diamonds</span><span>10,500 Ks</span></div>
+            <div class="price-item"><span>🔹 344 Diamonds</span><span>14,000 Ks</span></div>
+            <div class="price-item"><span>🔹 429 Diamonds</span><span>17,500 Ks</span></div>
+            <div class="price-item"><span>🔹 706 Diamonds</span><span>28,000 Ks</span></div>
+            <div class="price-item"><span>🔹 1050 Diamonds</span><span>41,000 Ks</span></div>
+            <div class="price-item"><span>🔹 2195 Diamonds</span><span>83,000 Ks</span></div>
+            <div class="price-item"><span>🔹 3688 Diamonds</span><span>135,000 Ks</span></div>
+            <div class="price-item"><span>🔹 5532 Diamonds</span><span>205,000 Ks</span></div>
+        </div>
+
+        <div class="form-group">
+            <label for="userId">MLBB User ID (အကောင့် ID)</label>
+            <input type="text" id="userId" placeholder="Enter User ID (e.g. 12345678)">
+        </div>
+
+        <div class="form-group">
+            <label for="zoneId">Zone ID (ဇုန် ID)</label>
+            <input type="text" id="zoneId" placeholder="Enter Zone ID (e.g. 1234)">
+        </div>
+
+        <div class="form-group">
+            <label for="diamondAmount">Select Diamonds (စိန်ပမာဏ ရွေးပါ)</label>
+            <select id="diamondAmount">
+                <option value="86 Diamonds">86 Diamonds - 3,500 Ks</option>
+                <option value="172 Diamonds">172 Diamonds - 7,000 Ks</option>
+                <option value="257 Diamonds">257 Diamonds - 10,500 Ks</option>
+                <option value="344 Diamonds">344 Diamonds - 14,000 Ks</option>
+                <option value="429 Diamonds">429 Diamonds - 17,500 Ks</option>
+                <option value="706 Diamonds">706 Diamonds - 28,000 Ks</option>
+                <option value="1050 Diamonds">1050 Diamonds - 41,000 Ks</option>
+                <option value="2195 Diamonds">2195 Diamonds - 83,000 Ks</option>
+                <option value="3688 Diamonds">3688 Diamonds - 135,000 Ks</option>
+                <option value="5532 Diamonds">5532 Diamonds - 205,000 Ks</option>
+            </select>
+        </div>
+
+        <button class="submit-btn" onclick="placeOrder()">Place Order Now (အော်ဒါတင်မည်)</button>
+
+        <div class="footer">
+            Thank you for using our service!
+        </div>
+    </div>
+
+    <script>
+        function placeOrder() {
+            const userId = document.getElementById("userId").value.trim();
+            const zoneId = document.getElementById("zoneId").value.trim();
+            const selectedDiamonds = document.getElementById("diamondAmount").value;
+
+            if (userId === "" || zoneId === "") {
+                alert("⚠️ Please fill in User ID and Zone ID!\n(ID ဖြည့်ရန်လိုအပ်ပါသည်!)");
+                return;
+            }
+
+            const message = `✅ Order Received! (အော်ဒါလက်ခံရရှိပါသည်)\n\nUser ID: ${userId}\nZone ID: ${zoneId}\nPackage: ${selectedDiamonds}\n\nPlease make payment to complete!`;
+            alert(message);
+        }
+    </script>
+
+</body>
+</html>
